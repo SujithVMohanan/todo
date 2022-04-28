@@ -32,11 +32,11 @@ class TaskUpdateView(UpdateView):
     def get_success_url(self):
         return reverse_lazy('todoapp:details', kwargs={'pk': self.object.id})
 
+
 class TaskDeleteView(DeleteView):
     model = Tasks
     template_name = 'delete.html'
     success_url = reverse_lazy('todoapp:cbvhome')
-
 
 
 def home(request):
